@@ -8,23 +8,20 @@ def guess():
     return input("Guess a 4 digit number: ")
 
 
-
 def compareNums(num,uguess):
     cowCount, bullCount =0,0
     for x in range(len(num)):
         if num[x] == uguess[x]:
             cowCount+= 1
-        elif uguess[x] in num:
+        elif num[x] in uguess:
             bullCount+=1
     return cowCount, bullCount
 
 
-
-
 if __name__=="__main__":
-    print("Welcome to the cows and bulls game")
+    print("Welcome to the cows and bulls game!!!")
     num=list(str(ranNum()))
-    print(num)
+    #print(num)
     cowCount, guessCount = 0,0
     while(cowCount != 4):
         uguess=list(guess())
